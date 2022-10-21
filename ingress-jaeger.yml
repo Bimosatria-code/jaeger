@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: jaeger
+  namespace: mike-jaeger
+spec:
+  rules:
+  - host: mike-jaeger.host.co.id
+    http:
+      paths:
+      - backend:
+          serviceName: jaeger
+          servicePort: 16686
+        path: /
+        pathType: Prefix
