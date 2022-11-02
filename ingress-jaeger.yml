@@ -7,10 +7,10 @@ metadata:
     nginx.ingress.kubernetes.io/auth-secret: basic-auth
     nginx.ingress.kubernetes.io/auth-realm: "Authentication required"
   name: jaeger
-  namespace: mike-jaeger
+  namespace: jaeger
 spec:
   rules:
-  - host: mike-jaeger.host.co.id
+  - host: jaeger.host.co.id
     http:
       paths:
       - backend:
